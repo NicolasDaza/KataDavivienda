@@ -1,22 +1,59 @@
-# Maven
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+# ==========================================================
+# Azure DevOps Pipeline - KataDavivienda 
+# Repositorio: https://github.com/NicolasDaza/KataDavivienda
+# ==========================================================
 
 trigger:
 - master
+
+# Usa un agente Linux con Java preinstalado
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+
+  # Clonar el repositorio desde GitHub
+  - checkout: none
+  - script: |
+      git clone https://github.com/NicolasDaza/KataDavivienda.git
+      cd KataDavivienda
+      ls -la
+    displayName: 'Clonar repositorio KataDavivienda desde GitHub'
+
+  # Instalar JDK 17
+  - task: UseJavaVersion@1
+    inputs:
+      versionSpec: '17'
+      architecture: 'x64'
+    displayName: 'Instalar Java JDK 17'
+
+  # Instalar Maven
+  - task: MavenInstaller@0
+    inputs:
+      mavenVersionOption: 'Default'
+    displayName: 'Instalar Maven'
+
+  # Verificar versiones instaladas
+  - script: |
+      java -version
+      mvn -version
+    displayName: 'Verificar instalación de Java y Maven'
+
+  # Compilar el proyecto 
+  - script: |
+      cd KataDavivienda
+      mvn clean compile
+    displayName: 'Compilar el proyecto'
+
+  # Ejecutar pruebas
+  - script: |
+      cd KataDavivienda
+      mvn test
+    displayName: 'Ejecutar pruebas'
+
+  # Empaquetar el proyecto (genera el .jar o .war)
+  - script: |
+      cd KataDavivienda
+      mvn package
+    displayName: 'Empaquetar el proyecto'
