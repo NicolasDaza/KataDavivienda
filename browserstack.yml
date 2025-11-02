@@ -1,0 +1,15 @@
+userName: nicolsalejandroc_obK0sN
+accessKey: dy3fqqHNWHed7si5SwN1
+platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Chrome
+    browserVersion: 120.0
+
+browserstackLocal: true
+buildName: bstack-demo
+projectName: BrowserStack Sample
+CUSTOM_TAG_1: "Kata Davivienda"
+debug: true
+networkLogs: true
+consoleLogs: info

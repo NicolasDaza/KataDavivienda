@@ -1,0 +1,50 @@
+21:31:34.814 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+21:31:35.176 [main] INFO  c.browserstack.BrowserStackJavaAgent - Selenium version detected - 4.35.0
+21:31:35.177 [main] INFO  c.browserstack.BrowserStackJavaAgent - Appium version detected - 10.0.0
+21:31:35.474 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {}
+21:31:37.031 [main] INFO  c.browserstack.BrowserStackJavaAgent - Framework set to java
+21:31:37.035 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: d2966242-b2c6-41b4-9f7e-513af5355c91
+21:31:37.035 [main] INFO  c.b.config.BrowserStackConfig - INFO
+21:31:37.142 [main] DEBUG com.browserstack.v2.SdkCliUtils - File C:\Users\57310\.browserstack already exist
+21:31:37.146 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: C:\Users\57310\.browserstack\cli\binary-win-x64.exe
+21:31:39.561 [main] DEBUG com.browserstack.v2.SdkCliUtils - Resolved binary path: C:\Users\57310\.browserstack\cli\binary-win-x64.exe
+21:31:39.579 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=java
+21:31:42.996 [main] WARN  c.b.config.BrowserStackConfig - TEST REPORTING AND ANALYTICS could not be enabled because framework detected is java. We currently support frameworks testng, cucumber-testng & serenity
+21:31:43.332 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+21:31:43.961 [main] INFO  com.browserstack.testOps.Listener - Testhub started with id: i4xfyvkubp5lzwzdlqbughjc5er9dppczhc1jua3
+21:31:43.961 [main] INFO  c.b.config.BrowserStackConfig - INFO
+21:31:43.970 [main] INFO  c.browserstack.BrowserStackJavaAgent - Starting BrowserStack Local......
+21:31:50.529 [main] INFO  com.browserstack.LocalFactory - BrowserStack Local Started Successfully.
+21:31:55.367 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+21:31:56.010 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {}
+21:31:56.280 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: 85e7aea0-9f21-4a7c-9149-0340966a4d12
+21:31:56.280 [main] INFO  c.b.config.BrowserStackConfig - INFO
+21:31:56.378 [main] DEBUG com.browserstack.v2.SdkCliUtils - File C:\Users\57310\.browserstack already exist
+21:31:56.382 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: C:\Users\57310\.browserstack\cli\binary-win-x64.exe
+21:31:57.401 [main] DEBUG com.browserstack.v2.SdkCliUtils - Resolved binary path: C:\Users\57310\.browserstack\cli\binary-win-x64.exe
+21:31:57.419 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=java
+21:32:00.220 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+21:32:00.296 [main] WARN  c.b.config.BrowserStackConfig - TEST REPORTING AND ANALYTICS could not be enabled because framework detected is java. We currently support frameworks testng, cucumber-testng & serenity
+21:33:48.168 [Thread-0] ERROR c.browserstack.testOps.RequestUtils - [RequestUtils] Error in stop: Non 200 response
+com.browserstack.testOps.RequestException: Non 200 response
+	at com.browserstack.testOps.RequestException.non200(Unknown Source)
+	at com.browserstack.testOps.RequestUtils.requestToTestOps(Unknown Source)
+	at com.browserstack.testOps.RequestUtils.requestToTestOpsString(Unknown Source)
+	at com.browserstack.testOps.RequestUtils.stop(Unknown Source)
+	at com.browserstack.testOps.Listener.a(Unknown Source)
+	at com.browserstack.testOps.Listener.a(Unknown Source)
+	at com.browserstack.testOps.Listener.onComplete(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at com.browserstack.utils.ConditionalInvocationHandler.invoke(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.onComplete(Unknown Source)
+	at com.browserstack.BrowserStackJavaAgent$FinalExecution.a(Unknown Source)
+	at com.browserstack.BrowserStackJavaAgent$FinalExecution.a(Unknown Source)
+	at com.browserstack.BrowserStackJavaAgent$FinalExecution.run(Unknown Source)
+21:33:48.845 [Thread-0] INFO  com.browserstack.v2.SdkCLI - stop: cli is not running.
+21:33:52.950 [Thread-0] INFO  c.browserstack.utils.UtilityMethods - View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/301d6c730c52ed375cf25edd519b3fbaa8efb48f
+21:33:52.950 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+21:33:52.955 [Thread-0] INFO  c.browserstack.BrowserStackJavaAgent - SDK run ended for id: d2966242-b2c6-41b4-9f7e-513af5355c91, testhub id: i4xfyvkubp5lzwzdlqbughjc5er9dppczhc1jua3
+21:33:52.955 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
